@@ -20,7 +20,9 @@ public class MainMaven {
                                         new AgentRequest(asl.benevolence_companion.create(), "benevolence", 1),
                                         new AgentRequest(asl.competence_companion.create(), "competence", 1),
                                         new AgentRequest(asl.predictability_companion.create(), "predictability", 1),
-                                        new AgentRequest(asl.reasoning_companion.create(), "reasoning", 1)
+                                        new AgentRequest(asl.reasoning_companion.create(), "reasoning", 1),
+                                        new AgentRequest(asl.agent_companion.create(), "agent", 1)
+
                                 )
                         ),
                         system

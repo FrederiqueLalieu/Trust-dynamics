@@ -180,5 +180,6 @@ skill(P, C, X) :- belief(Y, skill, P, C, X).
     +belief(X, Z, A, B, C, D, E);
     !is_contradiction().
 
+
 // +ready() =>
 //     !update_trustworthiness().

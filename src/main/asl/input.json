@@ -19,6 +19,11 @@
       "name" : "reasoning",
       "script_file" : "reasoning.asl",
       "number": 1
+    },
+    {
+      "name" : "agent",
+      "script_file" : "agent.asl",
+      "number": 1
     }
   ]
 }

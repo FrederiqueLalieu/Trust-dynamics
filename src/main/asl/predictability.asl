@@ -50,6 +50,7 @@ threshold(0.7).
 !update_predictability(tom).
 
 +!update_predictability(Agent) =>
+    #println("-------Update the predictability of agent " + Agent + "------");
     for (X in principle(Agent, X, P)) {
         !get_principle_intention(Agent, X);
     };

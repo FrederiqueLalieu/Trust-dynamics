@@ -392,18 +392,18 @@ package asl
                       def plan0(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
                                           PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(StringTerm("-------------------PREDICTABILITY---------------------"))))
-                                               val ex_L74935 = executionContext.beliefBase.bufferedQuery( StructTerm("intention",Seq[GenericTerm](vars("Agent"),vars("L74935"))) )
-                                               while (ex_L74935.hasNext) {
-                                                   val sol_L74935 = ex_L74935.next
-                                                   if(sol_L74935.result) {
-                                                   vars += ("Plan" -> sol_L74935.bindings("L74935").asInstanceOf[GenericTerm])
+                                               val ex_L98773 = executionContext.beliefBase.bufferedQuery( StructTerm("intention",Seq[GenericTerm](vars("Agent"),vars("L98773"))) )
+                                               while (ex_L98773.hasNext) {
+                                                   val sol_L98773 = ex_L98773.next
+                                                   if(sol_L98773.result) {
+                                                   vars += ("Plan" -> sol_L98773.bindings("L98773").asInstanceOf[GenericTerm])
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println( ( ( (vars("Agent") + StringTerm(" intends to do "))  + vars("Plan"))  + StringTerm(".")) )))
                                                                        adopt_achievement_get_principle_intention_2.execute(Parameters(List( vars("Agent") , vars("Plan")  )))
-                                                                            val ex_L22736 = executionContext.beliefBase.bufferedQuery( StructTerm("subplan",Seq[GenericTerm](vars("Plan"),vars("L22736"))) )
-                                                                            while (ex_L22736.hasNext) {
-                                                                                val sol_L22736 = ex_L22736.next
-                                                                                if(sol_L22736.result) {
-                                                                                vars += ("Subplan" -> sol_L22736.bindings("L22736").asInstanceOf[GenericTerm])
+                                                                            val ex_L9164 = executionContext.beliefBase.bufferedQuery( StructTerm("subplan",Seq[GenericTerm](vars("Plan"),vars("L9164"))) )
+                                                                            while (ex_L9164.hasNext) {
+                                                                                val sol_L9164 = ex_L9164.next
+                                                                                if(sol_L9164.result) {
+                                                                                vars += ("Subplan" -> sol_L9164.bindings("L9164").asInstanceOf[GenericTerm])
                                                                                                     adopt_achievement_get_principle_intention_2.execute(Parameters(List( vars("Agent") , vars("Subplan")  )))
 
                                                                                 }
@@ -455,11 +455,11 @@ package asl
 
                       def plan0(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
-                                               val ex_L40175 = executionContext.beliefBase.bufferedQuery( StructTerm("principle",Seq[GenericTerm](vars("Agent"),vars("L40175"),vars("_"))) )
-                                               while (ex_L40175.hasNext) {
-                                                   val sol_L40175 = ex_L40175.next
-                                                   if(sol_L40175.result) {
-                                                   vars += ("P" -> sol_L40175.bindings("L40175").asInstanceOf[GenericTerm])
+                                               val ex_L5164 = executionContext.beliefBase.bufferedQuery( StructTerm("principle",Seq[GenericTerm](vars("Agent"),vars("L5164"),vars("_"))) )
+                                               while (ex_L5164.hasNext) {
+                                                   val sol_L5164 = ex_L5164.next
+                                                   if(sol_L5164.result) {
+                                                   vars += ("P" -> sol_L5164.bindings("L5164").asInstanceOf[GenericTerm])
                                                                        adopt_achievement_get_weight_3.execute(Parameters(List( vars("Agent") , vars("P") , vars("Plan")  )))
 
                                                    }
