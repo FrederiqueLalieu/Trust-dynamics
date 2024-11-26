@@ -25,6 +25,7 @@ phi(damian, health, cleaning, 0.1).
 
 // Plans
 +!update_benevolence(A) =>
+    #println("------Updating benevolence of agent " + A + "------")
     for (Offer in offer(A, NewPlan, OldPlan, Offer)) {
         #println("We are now updating according to " + Offer + ".");
         #println("We don't know if " + Offer + " is accepted. We will try to find out now.");

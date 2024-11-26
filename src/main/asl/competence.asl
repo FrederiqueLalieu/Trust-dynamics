@@ -1,6 +1,4 @@
 // COMPLETE
-// IDEA: is het nodig om dingen waar je niks over weet op te slaan als [0,1]?
-// Betekent 'I knów that I know nothing about it'
 
 // Initial beliefs
 intention(a, gardening).
@@ -37,7 +35,7 @@ knowledge(swimming, technique, 0.5).
 
 // Plans
 +!update_competence(A) =>
-
+#println("------Updating competence of agent " + A + "------")
 for (Action in succes(A, Action)) {
     #println(Action);
     !update_competence_succes(A, Action);};
@@ -47,7 +45,6 @@ for (Action in failure(A, Action, _)) {
     !update_competence_failures(A, Action);
 }.
 
-// Could be more efficient, with only one if statement
 +!add_info(A, Action, Condition) :
     knowledge(Action, Condition, X) &&
     knowledge(A, Condition, Low, High) =>

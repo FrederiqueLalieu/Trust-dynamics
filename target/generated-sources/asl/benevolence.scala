@@ -20,7 +20,7 @@ package asl
  import bb.expstyla.exp._
  import std.{AgentCommunicationLayer, DefaultCommunications}
 
- class tom  (coms: AgentCommunicationLayer = new  DefaultCommunications,
+ class benevolence  (coms: AgentCommunicationLayer = new  DefaultCommunications,
                                      beliefBaseFactory: IBeliefBaseFactory = new StylaBeliefBaseFactory)
                       extends IntentionalAgentFactory {
 
@@ -38,17 +38,17 @@ package asl
             case SubGoalMessage(_,_,r) =>
                message.goal match {
 
-                   case tom.this.adopt_achievement_update_benevolence_1 =>
-                     tom.this.adopt_achievement_update_benevolence_1.execute(message.params.asInstanceOf[Parameters])
+                   case benevolence.this.adopt_achievement_update_benevolence_1 =>
+                     benevolence.this.adopt_achievement_update_benevolence_1.execute(message.params.asInstanceOf[Parameters])
 
-                   case tom.this.adopt_achievement_evaluate_offer_2 =>
-                     tom.this.adopt_achievement_evaluate_offer_2.execute(message.params.asInstanceOf[Parameters])
+                   case benevolence.this.adopt_achievement_evaluate_offer_2 =>
+                     benevolence.this.adopt_achievement_evaluate_offer_2.execute(message.params.asInstanceOf[Parameters])
 
-                   case tom.this.adopt_achievement_update_benevolence_accept_4 =>
-                     tom.this.adopt_achievement_update_benevolence_accept_4.execute(message.params.asInstanceOf[Parameters])
+                   case benevolence.this.adopt_achievement_update_benevolence_accept_4 =>
+                     benevolence.this.adopt_achievement_update_benevolence_accept_4.execute(message.params.asInstanceOf[Parameters])
 
-                   case tom.this.adopt_achievement_update_benevolence_reject_3 =>
-                     tom.this.adopt_achievement_update_benevolence_reject_3.execute(message.params.asInstanceOf[Parameters])
+                   case benevolence.this.adopt_achievement_update_benevolence_reject_3 =>
+                     benevolence.this.adopt_achievement_update_benevolence_reject_3.execute(message.params.asInstanceOf[Parameters])
 
 
            case _ =>
@@ -72,7 +72,7 @@ package asl
  override def agentBuilder: Agent = new Agent()
  class Agent extends IAgent {
 
-         override def agent_type: String = "tom"
+         override def agent_type: String = "benevolence"
 
          var vars = VarMap()
 
@@ -346,11 +346,11 @@ package asl
 
                       def plan0(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
-                                               val ex_L32208 = executionContext.beliefBase.bufferedQuery( StructTerm("offer",Seq[GenericTerm](vars("A"),vars("NewPlan"),vars("OldPlan"),vars("L32208"))) )
-                                               while (ex_L32208.hasNext) {
-                                                   val sol_L32208 = ex_L32208.next
-                                                   if(sol_L32208.result) {
-                                                   vars += ("Offer" -> sol_L32208.bindings("L32208").asInstanceOf[GenericTerm])
+                                               val ex_L22314 = executionContext.beliefBase.bufferedQuery( StructTerm("offer",Seq[GenericTerm](vars("A"),vars("NewPlan"),vars("OldPlan"),vars("L22314"))) )
+                                               while (ex_L22314.hasNext) {
+                                                   val sol_L22314 = ex_L22314.next
+                                                   if(sol_L22314.result) {
+                                                   vars += ("Offer" -> sol_L22314.bindings("L22314").asInstanceOf[GenericTerm])
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println( ( (StringTerm("We are now updating according to ") + vars("Offer"))  + StringTerm(".")) )))
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println( ( (StringTerm("We dont know if ") + vars("Offer"))  + StringTerm(" is accepted. We will try to find out now.")) )))
                                                                        adopt_achievement_evaluate_offer_2.execute(Parameters(List( vars("A") , vars("Offer")  )))
@@ -450,11 +450,11 @@ package asl
 
                                           PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(StringTerm("The offer was accepted."))))
                                            BeliefUpdateAction.execute(BeliefUpdateAction.Parameters("+", StructTerm("intention",Seq[GenericTerm](vars("A"),vars("NewPlan")))),GoalParser)
-                                               val ex_L67792 = executionContext.beliefBase.bufferedQuery( StructTerm("phi",Seq[GenericTerm](vars("A"),vars("L67792"),vars("NewPlan"),vars("X1"))) )
-                                               while (ex_L67792.hasNext) {
-                                                   val sol_L67792 = ex_L67792.next
-                                                   if(sol_L67792.result) {
-                                                   vars += ("Value" -> sol_L67792.bindings("L67792").asInstanceOf[GenericTerm])
+                                               val ex_L93437 = executionContext.beliefBase.bufferedQuery( StructTerm("phi",Seq[GenericTerm](vars("A"),vars("L93437"),vars("NewPlan"),vars("X1"))) )
+                                               while (ex_L93437.hasNext) {
+                                                   val sol_L93437 = ex_L93437.next
+                                                   if(sol_L93437.result) {
+                                                   vars += ("Value" -> sol_L93437.bindings("L93437").asInstanceOf[GenericTerm])
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println( ( (StringTerm("We will check if ") + vars("Value"))  + StringTerm(" is relevant.")) )))
                                                                        adopt_achievement_update_benevolence_accept_4.execute(Parameters(List( vars("A") , vars("Value") , vars("NewPlan") , vars("OldPlan")  )))
 
@@ -467,11 +467,11 @@ package asl
                       def plan1(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
                                           PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(StringTerm("The offer was rejected."))))
-                                               val ex_L17867 = executionContext.beliefBase.bufferedQuery( StructTerm("reject",Seq[GenericTerm](vars("A"),vars("Offer"),vars("L17867"))) )
-                                               while (ex_L17867.hasNext) {
-                                                   val sol_L17867 = ex_L17867.next
-                                                   if(sol_L17867.result) {
-                                                   vars += ("Value" -> sol_L17867.bindings("L17867").asInstanceOf[GenericTerm])
+                                               val ex_L36310 = executionContext.beliefBase.bufferedQuery( StructTerm("reject",Seq[GenericTerm](vars("A"),vars("Offer"),vars("L36310"))) )
+                                               while (ex_L36310.hasNext) {
+                                                   val sol_L36310 = ex_L36310.next
+                                                   if(sol_L36310.result) {
+                                                   vars += ("Value" -> sol_L36310.bindings("L36310").asInstanceOf[GenericTerm])
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println( ( (StringTerm("It was rejected on the basis of ") + vars("Value"))  + StringTerm(".")) )))
                                                                        adopt_achievement_update_benevolence_reject_3.execute(Parameters(List( vars("A") , vars("Offer") , vars("Value")  )))
 
@@ -656,9 +656,9 @@ package asl
 
 
  }
-object tom_companion { 
-   def create() = new tom().agentBuilder 
-   def create(in_coms : AgentCommunicationLayer) = new tom(coms = in_coms).agentBuilder 
-   def create(in_beliefBaseFactory: IBeliefBaseFactory) = new tom(beliefBaseFactory = in_beliefBaseFactory).agentBuilder 
-   def create(in_coms : AgentCommunicationLayer, in_beliefBaseFactory: IBeliefBaseFactory) = new tom(coms = in_coms, beliefBaseFactory = in_beliefBaseFactory).agentBuilder 
+object benevolence_companion { 
+   def create() = new benevolence().agentBuilder 
+   def create(in_coms : AgentCommunicationLayer) = new benevolence(coms = in_coms).agentBuilder 
+   def create(in_beliefBaseFactory: IBeliefBaseFactory) = new benevolence(beliefBaseFactory = in_beliefBaseFactory).agentBuilder 
+   def create(in_coms : AgentCommunicationLayer, in_beliefBaseFactory: IBeliefBaseFactory) = new benevolence(coms = in_coms, beliefBaseFactory = in_beliefBaseFactory).agentBuilder 
 } 
