@@ -1,6 +1,7 @@
-// COMPLETE
+//////////////////////////////////////////////
+// Example of initial beliefs
+/////////////////////////////////////////////
 
-// Initial beliefs
 intention(a, gardening).
 succes(a, gardening).
 
@@ -35,7 +36,7 @@ knowledge(swimming, technique, 0.5).
 
 // Plans
 +!update_competence(A) =>
-#println("------Updating competence of agent " + A + "------")
+#println("------Updating competence of agent " + A + "------");
 for (Action in succes(A, Action)) {
     #println(Action);
     !update_competence_succes(A, Action);};

@@ -1,6 +1,6 @@
-// COMPLETED
-// Geen upper bound want is het maximum niet altijd 0? Je hebt nooit het bewijs dat iemand iets niet zal doen
-// IDEA: handle the case dat niet voor elke value elk plan iets zegt
+//////////////////////////////////////////////
+// Example of initial beliefs
+//////////////////////////////////////////////
 
 agent(tom).
 agent(paula).

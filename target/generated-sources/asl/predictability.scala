@@ -405,21 +405,21 @@ package asl
 
                       def plan0(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
-                                               val ex_L55223 = executionContext.beliefBase.bufferedQuery( StructTerm("principle",Seq[GenericTerm](vars("Agent"),vars("L55223"),vars("P"))) )
-                                               while (ex_L55223.hasNext) {
-                                                   val sol_L55223 = ex_L55223.next
-                                                   if(sol_L55223.result) {
-                                                   vars += ("X" -> sol_L55223.bindings("L55223").asInstanceOf[GenericTerm])
+                                               val ex_L66493 = executionContext.beliefBase.bufferedQuery( StructTerm("principle",Seq[GenericTerm](vars("Agent"),vars("L66493"),vars("P"))) )
+                                               while (ex_L66493.hasNext) {
+                                                   val sol_L66493 = ex_L66493.next
+                                                   if(sol_L66493.result) {
+                                                   vars += ("X" -> sol_L66493.bindings("L66493").asInstanceOf[GenericTerm])
                                                                        adopt_achievement_get_principle_intention_2.execute(Parameters(List( vars("Agent") , vars("X")  )))
 
                                                    }
                                                }
                                            vars -= ("X")
-                                               val ex_L19291 = executionContext.beliefBase.bufferedQuery( StructTerm("weight",Seq[GenericTerm](vars("X"),vars("L19291"))) )
-                                               while (ex_L19291.hasNext) {
-                                                   val sol_L19291 = ex_L19291.next
-                                                   if(sol_L19291.result) {
-                                                   vars += ("W" -> sol_L19291.bindings("L19291").asInstanceOf[GenericTerm])
+                                               val ex_L62455 = executionContext.beliefBase.bufferedQuery( StructTerm("weight",Seq[GenericTerm](vars("X"),vars("L62455"))) )
+                                               while (ex_L62455.hasNext) {
+                                                   val sol_L62455 = ex_L62455.next
+                                                   if(sol_L62455.result) {
+                                                   vars += ("W" -> sol_L62455.bindings("L62455").asInstanceOf[GenericTerm])
                                                                        adopt_achievement_distanceWeight_2.execute(Parameters(List( vars("Agent") , vars("W")  )))
 
                                                    }
@@ -468,11 +468,11 @@ package asl
 
                       def plan0(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
-                                               val ex_L7009 = executionContext.beliefBase.bufferedQuery( StructTerm("intention",Seq[GenericTerm](vars("Agent"),vars("L7009"))) )
-                                               while (ex_L7009.hasNext) {
-                                                   val sol_L7009 = ex_L7009.next
-                                                   if(sol_L7009.result) {
-                                                   vars += ("Plan" -> sol_L7009.bindings("L7009").asInstanceOf[GenericTerm])
+                                               val ex_L32802 = executionContext.beliefBase.bufferedQuery( StructTerm("intention",Seq[GenericTerm](vars("Agent"),vars("L32802"))) )
+                                               while (ex_L32802.hasNext) {
+                                                   val sol_L32802 = ex_L32802.next
+                                                   if(sol_L32802.result) {
+                                                   vars += ("Plan" -> sol_L32802.bindings("L32802").asInstanceOf[GenericTerm])
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println( ( ( (vars("Agent") + StringTerm(" intends to do "))  + vars("Plan"))  + StringTerm(".")) )))
                                                                        adopt_achievement_get_weight_3.execute(Parameters(List( vars("Agent") , vars("X") , vars("Plan")  )))
 

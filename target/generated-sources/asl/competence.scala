@@ -367,22 +367,23 @@ package asl
 
                       def plan0(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
-                                               val ex_L93050 = executionContext.beliefBase.bufferedQuery( StructTerm("succes",Seq[GenericTerm](vars("A"),vars("L93050"))) )
-                                               while (ex_L93050.hasNext) {
-                                                   val sol_L93050 = ex_L93050.next
-                                                   if(sol_L93050.result) {
-                                                   vars += ("Action" -> sol_L93050.bindings("L93050").asInstanceOf[GenericTerm])
+                                          PrimitiveAction.execute(PrimitiveAction.Parameters(() => println( ( (StringTerm("------Updating competence of agent ") + vars("A"))  + StringTerm("------")) )))
+                                               val ex_L56245 = executionContext.beliefBase.bufferedQuery( StructTerm("succes",Seq[GenericTerm](vars("A"),vars("L56245"))) )
+                                               while (ex_L56245.hasNext) {
+                                                   val sol_L56245 = ex_L56245.next
+                                                   if(sol_L56245.result) {
+                                                   vars += ("Action" -> sol_L56245.bindings("L56245").asInstanceOf[GenericTerm])
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(vars("Action"))))
                                                                        adopt_achievement_update_competence_succes_2.execute(Parameters(List( vars("A") , vars("Action")  )))
 
                                                    }
                                                }
                                            vars -= ("Action")
-                                               val ex_L15703 = executionContext.beliefBase.bufferedQuery( StructTerm("failure",Seq[GenericTerm](vars("A"),vars("L15703"),vars("_"))) )
-                                               while (ex_L15703.hasNext) {
-                                                   val sol_L15703 = ex_L15703.next
-                                                   if(sol_L15703.result) {
-                                                   vars += ("Action" -> sol_L15703.bindings("L15703").asInstanceOf[GenericTerm])
+                                               val ex_L69075 = executionContext.beliefBase.bufferedQuery( StructTerm("failure",Seq[GenericTerm](vars("A"),vars("L69075"),vars("_"))) )
+                                               while (ex_L69075.hasNext) {
+                                                   val sol_L69075 = ex_L69075.next
+                                                   if(sol_L69075.result) {
+                                                   vars += ("Action" -> sol_L69075.bindings("L69075").asInstanceOf[GenericTerm])
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(vars("Action"))))
                                                                        adopt_achievement_update_competence_failures_2.execute(Parameters(List( vars("A") , vars("Action")  )))
 
@@ -664,70 +665,70 @@ package asl
                       def plan0(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
                                            BeliefUpdateAction.execute(BeliefUpdateAction.Parameters("+", StructTerm("competent",Seq[GenericTerm](vars("A"),vars("Action")))),GoalParser)
-                                               val ex_L64648 = executionContext.beliefBase.bufferedQuery( StructTerm("knowledge",Seq[GenericTerm](vars("Action"),vars("L64648"),vars("X"))) )
-                                               while (ex_L64648.hasNext) {
-                                                   val sol_L64648 = ex_L64648.next
-                                                   if(sol_L64648.result) {
-                                                   vars += ("Knowledge" -> sol_L64648.bindings("L64648").asInstanceOf[GenericTerm])
+                                               val ex_L55741 = executionContext.beliefBase.bufferedQuery( StructTerm("knowledge",Seq[GenericTerm](vars("Action"),vars("L55741"),vars("X"))) )
+                                               while (ex_L55741.hasNext) {
+                                                   val sol_L55741 = ex_L55741.next
+                                                   if(sol_L55741.result) {
+                                                   vars += ("Knowledge" -> sol_L55741.bindings("L55741").asInstanceOf[GenericTerm])
                                                                        adopt_achievement_add_info_3.execute(Parameters(List( vars("A") , vars("Action") , vars("Knowledge")  )))
 
                                                    }
                                                }
                                            vars -= ("Knowledge")
-                                               val ex_L40272 = executionContext.beliefBase.bufferedQuery( StructTerm("resource",Seq[GenericTerm](vars("Action"),vars("L40272"),vars("X"))) )
-                                               while (ex_L40272.hasNext) {
-                                                   val sol_L40272 = ex_L40272.next
-                                                   if(sol_L40272.result) {
-                                                   vars += ("Resource" -> sol_L40272.bindings("L40272").asInstanceOf[GenericTerm])
+                                               val ex_L55785 = executionContext.beliefBase.bufferedQuery( StructTerm("resource",Seq[GenericTerm](vars("Action"),vars("L55785"),vars("X"))) )
+                                               while (ex_L55785.hasNext) {
+                                                   val sol_L55785 = ex_L55785.next
+                                                   if(sol_L55785.result) {
+                                                   vars += ("Resource" -> sol_L55785.bindings("L55785").asInstanceOf[GenericTerm])
                                                                        adopt_achievement_add_info_3.execute(Parameters(List( vars("A") , vars("Action") , vars("Resource")  )))
 
                                                    }
                                                }
                                            vars -= ("Resource")
-                                               val ex_L90255 = executionContext.beliefBase.bufferedQuery( StructTerm("skill",Seq[GenericTerm](vars("Action"),vars("L90255"),vars("X"))) )
-                                               while (ex_L90255.hasNext) {
-                                                   val sol_L90255 = ex_L90255.next
-                                                   if(sol_L90255.result) {
-                                                   vars += ("Skill" -> sol_L90255.bindings("L90255").asInstanceOf[GenericTerm])
+                                               val ex_L65868 = executionContext.beliefBase.bufferedQuery( StructTerm("skill",Seq[GenericTerm](vars("Action"),vars("L65868"),vars("X"))) )
+                                               while (ex_L65868.hasNext) {
+                                                   val sol_L65868 = ex_L65868.next
+                                                   if(sol_L65868.result) {
+                                                   vars += ("Skill" -> sol_L65868.bindings("L65868").asInstanceOf[GenericTerm])
                                                                        adopt_achievement_add_info_3.execute(Parameters(List( vars("A") , vars("Action") , vars("Skill")  )))
 
                                                    }
                                                }
                                            vars -= ("Skill")
-                                               val ex_L92995 = executionContext.beliefBase.bufferedQuery( StructTerm("subplan",Seq[GenericTerm](vars("Action"),vars("L92995"))) )
-                                               while (ex_L92995.hasNext) {
-                                                   val sol_L92995 = ex_L92995.next
-                                                   if(sol_L92995.result) {
-                                                   vars += ("Subaction" -> sol_L92995.bindings("L92995").asInstanceOf[GenericTerm])
+                                               val ex_L98991 = executionContext.beliefBase.bufferedQuery( StructTerm("subplan",Seq[GenericTerm](vars("Action"),vars("L98991"))) )
+                                               while (ex_L98991.hasNext) {
+                                                   val sol_L98991 = ex_L98991.next
+                                                   if(sol_L98991.result) {
+                                                   vars += ("Subaction" -> sol_L98991.bindings("L98991").asInstanceOf[GenericTerm])
                                                                        PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(vars("Subaction"))))
                                                                         BeliefUpdateAction.execute(BeliefUpdateAction.Parameters("+", StructTerm("competent",Seq[GenericTerm](vars("A"),vars("Subaction")))),GoalParser)
-                                                                            val ex_L81850 = executionContext.beliefBase.bufferedQuery( StructTerm("knowledge",Seq[GenericTerm](StructTerm("subaction",Seq[GenericTerm]()),vars("L81850"),vars("X"))) )
-                                                                            while (ex_L81850.hasNext) {
-                                                                                val sol_L81850 = ex_L81850.next
-                                                                                if(sol_L81850.result) {
-                                                                                vars += ("Knowledge" -> sol_L81850.bindings("L81850").asInstanceOf[GenericTerm])
+                                                                            val ex_L16250 = executionContext.beliefBase.bufferedQuery( StructTerm("knowledge",Seq[GenericTerm](StructTerm("subaction",Seq[GenericTerm]()),vars("L16250"),vars("X"))) )
+                                                                            while (ex_L16250.hasNext) {
+                                                                                val sol_L16250 = ex_L16250.next
+                                                                                if(sol_L16250.result) {
+                                                                                vars += ("Knowledge" -> sol_L16250.bindings("L16250").asInstanceOf[GenericTerm])
                                                                                                     PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(vars("Knowledge"),vars("X"))))
                                                                                                      BeliefUpdateAction.execute(BeliefUpdateAction.Parameters("+", StructTerm("knowledge",Seq[GenericTerm](vars("A"),vars("Knowledge"),vars("X")))),GoalParser)
 
                                                                                 }
                                                                             }
                                                                         vars -= ("Knowledge")
-                                                                            val ex_L50287 = executionContext.beliefBase.bufferedQuery( StructTerm("resource",Seq[GenericTerm](vars("Subaction"),vars("L50287"))) )
-                                                                            while (ex_L50287.hasNext) {
-                                                                                val sol_L50287 = ex_L50287.next
-                                                                                if(sol_L50287.result) {
-                                                                                vars += ("Resource" -> sol_L50287.bindings("L50287").asInstanceOf[GenericTerm])
+                                                                            val ex_L7896 = executionContext.beliefBase.bufferedQuery( StructTerm("resource",Seq[GenericTerm](vars("Subaction"),vars("L7896"))) )
+                                                                            while (ex_L7896.hasNext) {
+                                                                                val sol_L7896 = ex_L7896.next
+                                                                                if(sol_L7896.result) {
+                                                                                vars += ("Resource" -> sol_L7896.bindings("L7896").asInstanceOf[GenericTerm])
                                                                                                     PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(vars("Resource"))))
                                                                                                      BeliefUpdateAction.execute(BeliefUpdateAction.Parameters("+", StructTerm("resource",Seq[GenericTerm](vars("A"),vars("Resource"),vars("X")))),GoalParser)
 
                                                                                 }
                                                                             }
                                                                         vars -= ("Resource")
-                                                                            val ex_L86333 = executionContext.beliefBase.bufferedQuery( StructTerm("skill",Seq[GenericTerm](vars("Subaction"),vars("L86333"),vars("X"))) )
-                                                                            while (ex_L86333.hasNext) {
-                                                                                val sol_L86333 = ex_L86333.next
-                                                                                if(sol_L86333.result) {
-                                                                                vars += ("Skill" -> sol_L86333.bindings("L86333").asInstanceOf[GenericTerm])
+                                                                            val ex_L64558 = executionContext.beliefBase.bufferedQuery( StructTerm("skill",Seq[GenericTerm](vars("Subaction"),vars("L64558"),vars("X"))) )
+                                                                            while (ex_L64558.hasNext) {
+                                                                                val sol_L64558 = ex_L64558.next
+                                                                                if(sol_L64558.result) {
+                                                                                vars += ("Skill" -> sol_L64558.bindings("L64558").asInstanceOf[GenericTerm])
                                                                                                     PrimitiveAction.execute(PrimitiveAction.Parameters(() => println(vars("Skill"))))
                                                                                                      BeliefUpdateAction.execute(BeliefUpdateAction.Parameters("+", StructTerm("skill",Seq[GenericTerm](vars("A"),vars("Skill"),vars("X")))),GoalParser)
 
@@ -789,11 +790,11 @@ package asl
 
                       def plan0(vars: VarMap)(implicit executionContext: ExecutionContext): Unit = {
 
-                                               val ex_L2821 = executionContext.beliefBase.bufferedQuery( StructTerm("failure",Seq[GenericTerm](vars("A"),vars("Action"),vars("L2821"))) )
-                                               while (ex_L2821.hasNext) {
-                                                   val sol_L2821 = ex_L2821.next
-                                                   if(sol_L2821.result) {
-                                                   vars += ("Reason" -> sol_L2821.bindings("L2821").asInstanceOf[GenericTerm])
+                                               val ex_L32605 = executionContext.beliefBase.bufferedQuery( StructTerm("failure",Seq[GenericTerm](vars("A"),vars("Action"),vars("L32605"))) )
+                                               while (ex_L32605.hasNext) {
+                                                   val sol_L32605 = ex_L32605.next
+                                                   if(sol_L32605.result) {
+                                                   vars += ("Reason" -> sol_L32605.bindings("L32605").asInstanceOf[GenericTerm])
                                                                        adopt_achievement_update_competence_failure_3.execute(Parameters(List( vars("A") , vars("Action") , vars("Reason")  )))
 
                                                    }
